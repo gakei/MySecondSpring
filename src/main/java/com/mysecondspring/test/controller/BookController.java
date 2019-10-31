@@ -13,8 +13,8 @@ public class BookController {
     @Autowired
     BookService bookService;
     @RequestMapping("/books")
-    public void books(){
+    public List<Book> books(){
         List<Book> books = bookService.getAllBooks();
-        System.out.println(books);
+        return books;
     }
 }
